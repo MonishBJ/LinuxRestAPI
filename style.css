@@ -1,0 +1,88 @@
+body
+{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(243, 243, 225);
+    font-family: 'Henny Penny', cursive;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Saira', sans-serif;
+font-family: 'Source Code Pro', monospace;
+
+}
+h1{
+    margin:40 40 40 40px;
+    padding: 30;
+    color:black;
+    font-size:230%;
+    display: inline;
+}
+.box
+{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    width: 500px;
+    transform: translate(-50%,-50%);
+}
+input{
+    position: relative;
+    display:inline-block;
+    font-size: 20px;
+    box-sizing: border-box;
+    transition: .5s;
+}
+input[type="text"]
+{   font-size: medium;
+    padding: 20px;
+    background: white;
+    width: 240px;
+    height: 50px;
+    border: none;
+    outline: none;
+    padding: 0 25 px;
+    border-radius: 25px 0 0 25px;
+    
+}
+button
+{
+  position: relative;  
+  border-radius: 0 25px 25px 0;
+  font-size: 20px;
+  width:150px;
+  height:50px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: black;
+  color: white;
+
+}
+#data{
+    padding-top: 50%;
+    font-size:30px;
+    padding: 0.1cm;
+    position: relative;
+    margin:10;
+    margin-left: 300px;;
+ }
+ #data li{
+    display:inline-block;
+    align-items: center;
+    margin-left:0%;
+    margin-right: 0%;
+    padding: 3%;
+    font-size: 20px;
+    
+    
+ }
+ #data li a{
+    color: black;
+    display: block;
+    border-radius: 10px;
+ }
+ #data li a:hover{
+    color: white;
+    background-color:black ;
+   
+    padding: 0px;
+ }
