@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Henny+Penny&family=Montserrat:wght@300&family=Saira:wght@100&family=Source+Code+Pro:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="box">
+        <h1 ><b>ENTER THE IP ADDRESS:</b></h1>
+        <br><br>
+        
+        <form onsubmit="myFunction(event)" id="form">
+            
+            <input type="text" placeholder="   Enter the IP address" minlength="7" maxlength="15" size="15" pattern="^((\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.){3}(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])$">
+            <button type="submit"><i class="fa fa-search" aria-hidden="true"></i>
+            </button>
+        </form>
+        <br>
+        
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br>
+    <div id="data">
+
+    </div>
+     <script type="text/javascript">
+        function myFunction(e)
+        {   
+             e.preventDefault()
+              alert("working")
+            
+               fetch('data.json')
+              .then(function(response){
+                  return response.json();
+               })
+              .then(function(data){
+                
+                 appendData(data);
+        
+               })
+              .catch(function(err){
+              console.log(err);
+              });
+             
+              function appendData(data){
+               
+                let message =document.querySelector("#data");
+                message.innerHTML="CHOOSE THE DATA YOU WANT TO FETCH :"+"<br/>"+"<li><a>CPU Details</a></li>&nbsp<li><a>Hardware</a></li>&nbsp<li><a>PCI Devices</a></li>&nbsp<li><a>USB Controllers</a></li>&nbsp<li><a>SATA Devices</a></li>";
+                
+             
+         } 
+
+        
+         }
+     </script> 
+</body>
+</html>
