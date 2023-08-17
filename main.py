@@ -12,7 +12,7 @@ class Hello(Resource):
         return jsonify({'data': 'welcome to demo'})
 
     def post(self):
-        return jsonify({'data': "vials"}), 201
+        return jsonify({'data': "vialsad"}), 201
 
 api.add_resource(Hello,'/')
 
